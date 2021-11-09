@@ -1,0 +1,134 @@
+/* Import Fonts and Init Variables */
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue");
+
+:root {
+    --onyx-grey: hsl(180, 4%, 8%);
+    --background-grey: hsl(180, 4%, 16%);
+    --white-grey: #eee;
+    --light-blue: #80d4ff;
+    --bright-blue: #00aaff;
+}
+
+/* Header */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.alpha-header-container {
+    display: flex;
+    justify-content: center;
+}
+
+.header-div {
+    overflow: hidden;
+    background-color: var(--onyx-grey);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    float: left;
+    background-color: var(--background-grey);
+    color: var(--white-grey);
+    text-align: center;
+    padding: 12px;
+    margin-left: 0;
+    font-family: "Lobster", regular;
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.nav-button {
+    float: left;
+    background-color: var(--background-grey);
+    color: var(--white-grey);
+    text-align: center;
+    padding: 12px 24px;
+    font-family: "Bebas Neue", regular;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 24px;
+    border-radius: 4px;
+    margin-left: 24px;
+}
+
+.nav-button:hover {
+    animation-name: button-color;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-color {
+    100% {
+        background-color: var(--light-blue);
+        color: white;
+    }
+}
+
+.nav-button-active {
+    background-color: var(--bright-blue);
+    color: white;
+}
+
+.nav-div {
+    margin-left: auto;
+}
+
+/* Header Responsiveness (For Mobile Devices) */
+@media screen and (max-width: 1070px) {
+    .header-div {
+        margin-top: 0;
+        padding: 10px 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-div {
+        margin: 10px 0 0 0;
+    }
+
+    .nav-button {
+        background-color: var(--light-blue);
+        color: white;
+    }
+
+    .nav-button-active, .nav-button-active:hover {
+        background-color: var(--bright-blue);
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .nav-button {
+        padding: 8px;
+        margin-left: 8px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .header-div {
+        border-radius: 0;
+        position: static;
+    }
+
+    .nav-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .nav-button {
+        margin: 10px 0 0 0;
+    }
+}

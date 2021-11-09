@@ -1,0 +1,88 @@
+/* Import Fonts and Init Variables */
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue");
+@import url("https://fonts.googleapis.com/css?family=Teko");
+
+:root {
+    --onyx-grey: hsl(180, 4%, 8%);
+    --background-grey: hsl(180, 4%, 16%);
+    --white-grey: #eee;
+    --bright-blue: #00aaff;
+}
+
+
+/* Creating Content Windows */
+body {
+    background-color: var(--background-grey)
+}
+
+.content {
+    padding: 40px 36px 24px 36px;
+}
+
+.content-window {
+    background-color: var(--onyx-grey);
+    color: var(--white-grey);
+    border-radius: 28px;
+    padding: 24px;
+    overflow: hidden;   /* Possible Redundant */
+}
+
+@media screen and (max-width: 1070px) {
+    .content {
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .content {
+        padding: 8px;
+    }
+}
+
+
+/* Positioning Content Window Below Header */
+.content {
+    margin-top: 108px;
+}
+
+@media screen and (max-width: 1070px) {
+    .content {
+        margin-top: 146px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .content {
+        margin-top: 0;
+    }
+}
+
+
+/* Text Styling */
+h3 {
+    font-family: "Bebas Neue", regular;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+p {
+    font-family: "Teko", regular;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 36px;
+}
+
+ul {
+    font-family: "Teko", regular;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 44px;
+    list-style-type: none;
+    margin-block: 32px;
+}

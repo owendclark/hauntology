@@ -1,0 +1,89 @@
+/* Import Fonts and Init Variables */
+@import url("https://fonts.googleapis.com/css?family=Teko");
+
+:root {
+    --white-grey: #eee;
+    --bright-blue: #00aaff;
+}
+
+
+/* Set Caption Styling */
+.figure-container > figcaption {
+    text-align: center;
+    font-family: "Teko", regular;
+    font-size: 16px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 16px;
+    padding: 0 12px;
+    margin-top: 4px;
+}
+
+.figure-container > figcaption > a {
+    font-style: italic;
+    text-decoration: none;
+    color: var(--bright-blue);
+}
+
+
+/* Universal Styling for Single Images and Dual Images */
+.image-container {
+    margin: 20px auto;
+}
+
+.figure-container {
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border: solid var(--white-grey);
+    border-radius: 24px;
+}
+
+
+/* Dual Image Styling */
+.dual-image-container {
+    display: flex;
+    align-items: center;
+}
+
+.dual-figure-container {
+    max-width: 300px;
+}
+
+.dual-figure-container > img {
+    border-width: 2px;
+}
+
+@media screen and (max-width: 780px) {
+    .dual-image-container {
+        flex-direction: column;
+    }
+
+    .dual-figure-container:last-child {
+        margin-top: 24px;
+    }
+}
+
+
+/* Single Image Styling */
+.single-figure-container {
+    max-width: 600px;
+}
+
+.single-figure-container > img {
+    border-width: 4px;
+}
+
+
+/* Content Image Styling */
+.content-figure-container {
+    max-width: 400px;
+    margin-block: 10px;
+}
+
+.content-figure-container > img {
+    border-width: 3px;
+}
