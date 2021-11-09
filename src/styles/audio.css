@@ -1,0 +1,59 @@
+/* Init Variables */
+:root {
+    --audio-background: hsl(180, 4%, 40%);
+    --button-background: hsl(180, 4%, 64%);
+    --slider-background: hsl(180, 4%, 64%);
+}
+
+
+/* Set Size and Positioning */
+.audio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-container {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+audio {
+    width: 600px;
+    margin: 0 12px;
+}
+
+
+/* Style Audio Player for Browesers with Webkit (Chromium Based Broswers + Safari) */
+audio::-webkit-media-controls-panel {
+    background-color: var(--audio-background);
+}
+
+audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button {
+    background-color: var(--button-background);
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display {
+    color: var(--white-grey);
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: var(--slider-background);
+    border-radius: 100vw;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: var(--slider-background);
+    border-radius: 100vw;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-right: 1rem;
+}
